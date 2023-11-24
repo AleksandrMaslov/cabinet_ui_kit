@@ -29,11 +29,10 @@
     "dev": "vite",
     "preview": "vite preview",
     "build": "tsc && vite build",
-    "predeploy": "tsc && vite build --mode hash",
-    "deploy": "gh-pages -d dist",
-    "publish patch": "npm version patch && npm publish --access public",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "deploy-storybook": "npm run build-storybook && touch ./storybook-static/.nojekyll && gh-pages -d ./storybook-static -t true",
+    "publish patch": "npm version patch && npm publish --access public"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.5.3",
@@ -41,6 +40,7 @@
     "@storybook/addon-links": "^7.5.3",
     "@storybook/addon-onboarding": "^1.0.8",
     "@storybook/blocks": "^7.5.3",
+    "@storybook/builder-vite": "^7.5.3",
     "@storybook/react": "^7.5.3",
     "@storybook/react-vite": "^7.5.3",
     "@storybook/testing-library": "^0.2.2",
