@@ -9,6 +9,10 @@
       "DOM",
       "DOM.Iterable"
     ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./@types"
+    ],
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -40,7 +44,7 @@
   ],
   "exclude": [
     "node_modules/",
-    "dist"
+    "dist",
   ],
   "references": [
     {

@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react'
 
 import classes from './Button.module.css'
-interface ButtonProps {
+export interface ButtonProps {
   children: ReactNode
   big?: boolean
   className?: string
