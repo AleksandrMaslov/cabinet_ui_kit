@@ -17,7 +17,7 @@ export default defineConfig({
   build: {
     lib: {
       name: 'cabinet_ui_kit',
-      entry: ['./src/components/index.ts', './src/constants/colors.ts'],
+      entry: ['./src/index.ts', './src/constants/colors.ts'],
       fileName: (format, name) => {
         if (format === 'es') return `${name}.js`
 

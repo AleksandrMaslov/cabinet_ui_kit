@@ -6,4 +6,5 @@
 
 .button_big {
   font-size: 30px;
+  background-color: var(--ui-var);
 }
