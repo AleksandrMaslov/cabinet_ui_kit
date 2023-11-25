@@ -1,16 +1,27 @@
-import { FC, ReactNode } from 'react'
+import { FC } from 'react'
 
 import classes from './Button.module.css'
 export interface ButtonProps {
-  children: ReactNode
-  big?: boolean
+  children: string
+  color?: '' | 'green' | 'lightgrey' | 'black'
+  inverted?: boolean
+  size?: '' | 'small'
   className?: string
 }
 
-const Button: FC<ButtonProps> = ({ children, className, big, ...props }) => {
+const Button: FC<ButtonProps> = ({
+  children,
+  color,
+  inverted,
+  size,
+  className,
+  ...props
+}) => {
   const rootClasses = [classes.button]
   if (className) rootClasses.push(className)
-  if (big) rootClasses.push(classes.button_big)
+  if (size) rootClasses.push(classes[`button_${size}`])
+  if (color) rootClasses.push(classes[`button_${color}`])
+  if (inverted) rootClasses.push(classes[`button_inverted`])
 
   return (
     <button className={rootClasses.join(' ')} {...props}>

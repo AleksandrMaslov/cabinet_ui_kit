@@ -1,10 +1,73 @@
 .button {
-  padding: 20px 30px;
-  border-radius: 5px;
+  --font-color: var(--black);
+  --bg-color: var(--white);
+  --border-color: var(--black);
+
+  color: var(--font-color);
+  border: 1.5px solid var(--border-color);
+
+  background-size: 205% 100%;
+  background-position: left 0 top 0;
+
+  transition:
+    background-position 0.2s ease-out,
+    color 0.2s;
+  background-image: linear-gradient(
+    to left,
+    var(--font-color),
+    var(--font-color) 50%,
+    var(--bg-color) 50%,
+    var(--bg-color)
+  );
+
+  padding: 15px 30px;
   cursor: pointer;
+
+  font-family: 'Jost', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  line-height: 1.45em;
 }
 
-.button_big {
-  font-size: 30px;
-  background-color: var(--ui-var);
+.button:hover {
+  color: var(--bg-color);
+  background-position: right calc(0% + 0.5%) top 0;
+}
+
+.button_small {
+  padding: 10px 30px;
+}
+
+.button_black {
+  --font-color: var(--white);
+  --bg-color: var(--black);
+  --border-color: var(--black);
+}
+
+.button_green {
+  --font-color: var(--white);
+  --bg-color: var(--green);
+  --border-color: var(--white);
+}
+
+.button_lightgrey {
+  --font-color: var(--black);
+  --bg-color: var(--lightgrey);
+  --border-color: var(--black);
+}
+
+.button_inverted {
+  color: var(--bg-color);
+  background-image: linear-gradient(
+    to left,
+    var(--bg-color),
+    var(--bg-color) 50%,
+    var(--font-color) 50%,
+    var(--font-color)
+  );
+}
+
+.button.button_inverted:hover {
+  color: var(--font-color);
 }
