@@ -1,3 +1,14 @@
 :root {
-  --ui-var: red;
+  --white: #fff;
+  --lightgrey: #e6e6e6;
+  --grey: #656565;
+  --black: #1f1f1f;
+  --orange: #c87a1b;
+  --green: #565b4f;
+  --lightgreen: #727963;
+  --blue: #83afcd;
+  --milk: #ecdbc5;
+
+  /* --font-size: calc(100vw / 1920 * 10) / 1.33;
+  --full-screen: calc(var(--vh, 1vh) * 100); */
 }
