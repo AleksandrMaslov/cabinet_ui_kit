@@ -15,9 +15,11 @@ const meta: Meta<typeof Button> = {
         category: 'Required',
         type: { summary: 'string' },
       },
+      description: 'Текстовое поле кнопки',
     },
     color: {
       options: ['undefined', 'black', 'green', 'lightgrey'],
+      description: 'Цветовая схема',
       table: {
         category: 'Optional',
         defaultValue: { summary: 'undefined' },
@@ -25,6 +27,7 @@ const meta: Meta<typeof Button> = {
     },
     inverted: {
       control: 'boolean',
+      description: 'Инверсия цветовой схемы',
       table: {
         category: 'Optional',
         defaultValue: { summary: false },
@@ -33,12 +36,14 @@ const meta: Meta<typeof Button> = {
     size: {
       control: 'inline-radio',
       options: ['undefined', 'small'],
+      description: 'Размер, определяемый внутренними отступами',
       table: {
         category: 'Optional',
         defaultValue: { summary: 'undefined' },
       },
     },
     className: {
+      description: 'Имя внешнего CSS класса для позиционирования',
       table: {
         category: 'Optional',
         defaultValue: { summary: 'undefined' },
