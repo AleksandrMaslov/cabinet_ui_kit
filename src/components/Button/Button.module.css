@@ -24,10 +24,10 @@
   cursor: pointer;
 
   font-family: 'Jost', sans-serif;
-  font-size: 1.125rem;
   font-weight: 500;
-  letter-spacing: 0.07em;
+  font-size: 1.8rem;
   line-height: 1.45em;
+  letter-spacing: 0.07em;
 }
 
 .button:hover {
@@ -36,7 +36,7 @@
 }
 
 .button_small {
-  padding: 10px 30px;
+  padding: 1rem 3rem;
 }
 
 .button_black {

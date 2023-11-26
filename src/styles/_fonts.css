@@ -1,3 +1,13 @@
+:root {
+  font-size: 10px;
+  font-family: 'PT Root UI', sans-serif;
+}
+
+body {
+  font-size: 1.8rem;
+  line-height: 1.25em;
+}
+
 h1,
 h2,
 h3,
@@ -6,13 +16,14 @@ h5,
 h6 {
   font-family: 'Jost', sans-serif;
   letter-spacing: 0.07em;
+  line-height: 1.45em;
 }
 
 h1 {
-  font-size: 4.375rem;
+  font-size: 7.5rem;
 }
 
-h2 {
+/* h2 {
   font-size: 4.0625rem;
 }
 
@@ -30,9 +41,4 @@ h5 {
 
 h6 {
   font-size: 1.6875rem;
-}
-
-:root {
-  font-size: 16px;
-  font-family: 'PT Root UI', sans-serif;
-}
+} */
