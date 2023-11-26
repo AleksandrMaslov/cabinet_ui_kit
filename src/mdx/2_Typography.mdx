@@ -1,9 +1,7 @@
 import { Meta, Typeset } from '@storybook/blocks'
-import { typography, sampleText } from './typography'
+import { TYPOGRAPHY, SAMPLETEXT } from '../constants.ts'
 
 <Meta title="Typography" />
-
-# Typography
 
 ## Primary
 
@@ -12,20 +10,10 @@ import { typography, sampleText } from './typography'
 **Weights:** 300(Light), 400(Regular), 500(Medium)
 
 <Typeset
-  fontSizes={[
-    Number(typography.size.primary.s1),
-    Number(typography.size.primary.s2),
-    Number(typography.size.primary.s3),
-    Number(typography.size.primary.m1),
-    Number(typography.size.primary.m2),
-    Number(typography.size.primary.m3),
-    Number(typography.size.primary.l1),
-    Number(typography.size.primary.l2),
-    Number(typography.size.primary.l3),
-  ]}
-  fontWeight={typography.weight.primary.medium}
-  sampleText={sampleText}
-  fontFamily={typography.type.primary}
+  fontSizes={Object.values(TYPOGRAPHY.size.primary).map(size => `${size}px`)}
+  fontWeight={TYPOGRAPHY.weight.primary.medium}
+  sampleText={SAMPLETEXT}
+  fontFamily={TYPOGRAPHY.type.primary}
 />
 
 ## Headers
@@ -35,18 +23,8 @@ import { typography, sampleText } from './typography'
 **Weights:** 500(Medium), 700(Bold), 800(ExtraBold)
 
 <Typeset
-  fontSizes={[
-    Number(typography.size.headers.s1),
-    Number(typography.size.headers.s2),
-    Number(typography.size.headers.s3),
-    Number(typography.size.headers.m1),
-    Number(typography.size.headers.m2),
-    Number(typography.size.headers.m3),
-    Number(typography.size.headers.l1),
-    Number(typography.size.headers.l2),
-    Number(typography.size.headers.l3),
-  ]}
-  fontWeight={typography.weight.extraBold}
-  sampleText={sampleText}
-  fontFamily={typography.type.headers}
+  fontSizes={Object.values(TYPOGRAPHY.size.headers).map(size => `${size}px`)}
+  fontWeight={TYPOGRAPHY.weight.extraBold}
+  sampleText={SAMPLETEXT}
+  fontFamily={TYPOGRAPHY.type.headers}
 />
