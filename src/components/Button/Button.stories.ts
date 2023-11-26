@@ -19,7 +19,7 @@ const meta: Meta<typeof Button> = {
     },
     color: {
       options: ['undefined', 'black', 'green', 'lightgrey'],
-      description: 'Цветовая схема',
+      description: 'Цветовая схема компонента',
       table: {
         category: 'Optional',
         defaultValue: { summary: 'undefined' },
