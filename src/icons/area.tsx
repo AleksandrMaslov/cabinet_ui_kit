@@ -1,0 +1,25 @@
+import { FC } from 'react'
+
+type SvgAreaProps = {
+  className?: string
+}
+
+const SvgArea: FC<SvgAreaProps> = ({ className }) => {
+  return (
+    <svg
+      className={className}
+      width="31"
+      height="31"
+      viewBox="0 0 31 31"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0.916748 0.916992H9.66675V3.83366H21.3334V0.916992H30.0834V9.66699H27.1667V21.3337H30.0834V30.0837H21.3334V27.167H9.66675V30.0837H0.916748V21.3337H3.83341V9.66699H0.916748V0.916992ZM21.3334 9.66699V6.75033H9.66675V9.66699H6.75008V21.3337H9.66675V24.2503H21.3334V21.3337H24.2501V9.66699H21.3334ZM3.83341 3.83366V6.75033H6.75008V3.83366H3.83341ZM24.2501 3.83366V6.75033H27.1667V3.83366H24.2501ZM3.83341 24.2503V27.167H6.75008V24.2503H3.83341ZM24.2501 24.2503V27.167H27.1667V24.2503H24.2501Z"
+        fill="white"
+      />
+    </svg>
+  )
+}
+
+export default SvgArea
