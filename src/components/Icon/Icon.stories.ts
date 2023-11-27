@@ -71,18 +71,6 @@ export const Appliances: Story = {
   },
 }
 
-export const Area: Story = {
-  args: {
-    icon: 'area',
-  },
-}
-
-export const Arrow: Story = {
-  args: {
-    icon: 'arrow',
-  },
-}
-
 export const Baby: Story = {
   args: {
     icon: 'baby',
@@ -131,27 +119,9 @@ export const Mail: Story = {
   },
 }
 
-export const Meeting: Story = {
-  args: {
-    icon: 'meeting',
-  },
-}
-
 export const Printer: Story = {
   args: {
     icon: 'printer',
-  },
-}
-
-export const Projector: Story = {
-  args: {
-    icon: 'projector',
-  },
-}
-
-export const Square: Story = {
-  args: {
-    icon: 'square',
   },
 }
 
@@ -167,14 +137,44 @@ export const WiFi: Story = {
   },
 }
 
+export const Yoga: Story = {
+  args: {
+    icon: 'yoga',
+  },
+}
+
+export const Arrow: Story = {
+  args: {
+    icon: 'arrow',
+  },
+}
+
+export const Area: Story = {
+  args: {
+    icon: 'area',
+  },
+}
+
 export const Workspace: Story = {
   args: {
     icon: 'workspace',
   },
 }
 
-export const Yoga: Story = {
+export const Projector: Story = {
   args: {
-    icon: 'yoga',
+    icon: 'projector',
+  },
+}
+
+export const Meeting: Story = {
+  args: {
+    icon: 'meeting',
+  },
+}
+
+export const Square: Story = {
+  args: {
+    icon: 'square',
   },
 }
