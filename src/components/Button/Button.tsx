@@ -3,9 +3,9 @@ import { FC } from 'react'
 import classes from './Button.module.css'
 export interface ButtonProps {
   children: string
-  color?: '' | 'green' | 'lightgrey' | 'black'
+  color?: 'green' | 'lightgrey' | 'black'
   inverted?: boolean
-  size?: '' | 'small'
+  size?: 'small'
   className?: string
 }
 
