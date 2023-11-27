@@ -28,12 +28,10 @@ const meta: Meta<typeof Logo> = {
       },
     },
     height: {
-      // control: 'inline-radio',
       options: ['undefined', 'small'],
       description: 'Размер, определяемый внутренними отступами',
       table: {
         category: 'Optional',
-        // defaultValue: { summary: 'undefined' },
       },
     },
     className: {
