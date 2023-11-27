@@ -17,6 +17,20 @@ const meta: Meta<typeof Button> = {
       },
       description: 'Текстовое поле кнопки',
     },
+    type: {
+      table: {
+        category: 'Optional',
+        defaultValue: { summary: 'undefined' },
+      },
+      description: 'Определяет поведение компонента в форме',
+    },
+    onClick: {
+      table: {
+        category: 'Optional',
+        defaultValue: { summary: 'undefined' },
+      },
+      description: 'Обработчик события нажатия на кнопку',
+    },
     color: {
       options: ['undefined', 'black', 'green', 'lightgrey'],
       description: 'Цветовая схема компонента',
@@ -59,6 +73,11 @@ export const Default: Story = {
   args: {
     children: 'Click Me',
     inverted: false,
+    color: undefined,
+    size: undefined,
+    type: undefined,
+    onClick: undefined,
+    className: undefined,
   },
 }
 

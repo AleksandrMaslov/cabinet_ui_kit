@@ -1,11 +1,14 @@
-import { FC } from 'react'
+import { FC, MouseEventHandler } from 'react'
 
 import classes from './Button.module.css'
-export interface ButtonProps {
+
+interface ButtonProps {
   children: string
   color?: 'green' | 'lightgrey' | 'black'
   inverted?: boolean
   size?: 'small'
+  type?: 'submit' | 'reset'
+  onClick?: MouseEventHandler<HTMLButtonElement>
   className?: string
 }
 
