@@ -1,0 +1,38 @@
+.anchor {
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+}
+
+.anchor::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--black);
+  height: 1.5px;
+  width: 0;
+  transition:
+    width 0.2s ease-out,
+    opacity 0.2s ease-out;
+}
+
+.anchor:hover::after {
+  width: 100%;
+}
+
+.anchor_underlined::after {
+  width: 100%;
+}
+
+.anchor_underlined:hover::after {
+  opacity: 0;
+}
+
+.anchor_white::after {
+  background-color: var(--white);
+}
+
+.anchor_orange::after {
+  background-color: var(--orange);
+}
