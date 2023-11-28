@@ -6,6 +6,9 @@ import { default as briefcase } from './briefcase'
 import { default as camera } from './camera'
 import { default as chat } from './chat'
 import { default as coffee } from './coffee'
+import { default as cross } from './cross'
+import { default as crossedeye } from './crossedeye'
+import { default as eye } from './eye'
 import { default as location } from './location'
 import { default as lock } from './lock'
 import { default as mail } from './mail'
@@ -29,6 +32,9 @@ const icons = {
   camera,
   chat,
   coffee,
+  cross,
+  crossedeye,
+  eye,
   location,
   lock,
   mail,

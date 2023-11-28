@@ -143,6 +143,24 @@ export const Yoga: Story = {
   },
 }
 
+export const Cross: Story = {
+  args: {
+    icon: 'cross',
+  },
+}
+
+export const CrossedEye: Story = {
+  args: {
+    icon: 'crossedeye',
+  },
+}
+
+export const Eye: Story = {
+  args: {
+    icon: 'eye',
+  },
+}
+
 export const Arrow: Story = {
   args: {
     icon: 'arrow',
