@@ -23,7 +23,7 @@ const meta: Meta<typeof Input> = {
         category: 'Optional',
       },
     },
-    autocomplete: {
+    autoComplete: {
       description: 'Автоматическое заполнение поля браузером',
       table: {
         category: 'Optional',
@@ -101,7 +101,7 @@ export const Default: Story = {
     value: undefined,
     onChange: undefined,
     required: false,
-    autocomplete: 'off',
+    autoComplete: 'off',
     bordered: false,
     className: undefined,
   },
@@ -117,7 +117,7 @@ export const Bordered: Story = {
     value: undefined,
     onChange: undefined,
     required: false,
-    autocomplete: 'off',
+    autoComplete: 'off',
     bordered: true,
     className: undefined,
   },

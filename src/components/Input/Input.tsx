@@ -13,7 +13,7 @@ interface InputProps {
   bordered?: boolean
   value?: string
   onChange?: (value: string) => void
-  autocomplete?: 'off' | 'on'
+  autoComplete?: 'off' | 'on'
   required?: boolean
   className?: string
 }
@@ -26,7 +26,7 @@ const Input: FC<InputProps> = ({
   value,
   onChange,
   className,
-  autocomplete = 'off',
+  autoComplete = 'off',
   type = 'text',
   required = false,
   bordered = false,
@@ -47,7 +47,7 @@ const Input: FC<InputProps> = ({
       <input
         className={textClasses.join(' ')}
         onChange={onChangeHandler}
-        {...{ id, name, type, placeholder, required, autocomplete, value }}
+        {...{ id, name, type, placeholder, required, autoComplete, value }}
       />
     </label>
   )
