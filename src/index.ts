@@ -9,5 +9,6 @@ import Icon from './components/Icon/Icon'
 import Input from './components/Input/Input'
 import Logo from './components/Logo/Logo'
 import Marker from './components/Marker/Marker'
+import Modal from './components/Modal/Modal'
 
-export { Anchor, Button, Checkbox, Icon, Input, Logo, Marker }
+export { Anchor, Button, Checkbox, Icon, Input, Logo, Marker, Modal }

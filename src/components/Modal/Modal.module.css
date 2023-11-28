@@ -1,0 +1,91 @@
+.cover {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+  min-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+}
+
+.title {
+  margin: 7rem 7rem 0rem 7rem;
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 1em;
+  letter-spacing: initial;
+}
+
+.content {
+  flex: 1 1 auto;
+  margin: 5rem 7rem 7rem 7rem;
+}
+
+@keyframes coverAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes inCoverAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes outCoverAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes modalAnimation {
+  0% {
+    scale: 0.7;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes inModalAnimation {
+  0% {
+    scale: 0.7;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes outModalAnimation {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 0.7;
+  }
+}
