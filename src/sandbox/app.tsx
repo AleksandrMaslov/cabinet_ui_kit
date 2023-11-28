@@ -1,8 +1,10 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 
-import { Button, Input, Logo } from '..'
+import { Button, Input, Logo, Modal } from '..'
 
 const App: FC = () => {
+  const [visible, setVisible] = useState<boolean>(false)
+
   return (
     <div
       style={{
@@ -14,20 +16,30 @@ const App: FC = () => {
     >
       <Logo />
 
-      <form
-        style={{
-          margin: 'auto',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '20px',
-          width: '600px',
+      <Button
+        onClick={() => {
+          setVisible(true)
         }}
       >
-        <Input label="Input" placeholder="Place" bordered />
-        <Input label="Input" placeholder="Place" required />
+        Visible
+      </Button>
 
-        <Button type="submit">Submit</Button>
-      </form>
+      {visible && (
+        <Modal title="Связаться с нами" setVisible={setVisible}>
+          <form
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '20px',
+            }}
+          >
+            <Input label="Input" placeholder="Place" bordered />
+            <Input label="Input" placeholder="Place" required />
+
+            <Button type="submit">Submit</Button>
+          </form>
+        </Modal>
+      )}
     </div>
   )
 }
