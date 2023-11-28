@@ -1,0 +1,37 @@
+.checkbox {
+  --color: var(--black);
+  accent-color: var(--color);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.input {
+  cursor: pointer;
+}
+
+.checkbox_white {
+  --color: var(--white);
+}
+.checkbox_lightgrey {
+  --color: var(--lightgrey);
+}
+.checkbox_grey {
+  --color: var(--grey);
+}
+.checkbox_orange {
+  --color: var(--orange);
+}
+.checkbox_green {
+  --color: var(--green);
+}
+.checkbox_lightgreen {
+  --color: var(--lightgreen);
+}
+.checkbox_blue {
+  --color: var(--blue);
+}
+.checkbox_milk {
+  --color: var(--milk);
+}
