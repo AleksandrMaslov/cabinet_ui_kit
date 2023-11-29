@@ -10,4 +10,6 @@
   --milk: #ecdbc5;
 
   --font-size: calc(100vw / 1920 * 10);
+  --font-primary: 'PT Root UI', sans-serif;
+  --font-special: 'Jost', sans-serif;
 }

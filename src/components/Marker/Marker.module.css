@@ -2,7 +2,7 @@
   position: relative;
   border-radius: 50%;
   background-color: var(--black);
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-special);
   font-weight: 500;
   font-size: 2rem;
   line-height: 2.6em;

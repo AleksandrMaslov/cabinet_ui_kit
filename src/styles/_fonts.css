@@ -1,6 +1,6 @@
 :root {
   font-size: var(--font-size, 10px);
-  font-family: 'PT Root UI', sans-serif;
+  font-family: var(--font-primary);
 }
 
 body {
@@ -14,7 +14,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Jost', sans-serif;
+  font-family: var(--font-special);
   letter-spacing: 0.07em;
   line-height: 1.45em;
   font-weight: 700;
