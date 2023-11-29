@@ -44,6 +44,7 @@ const TYPOGRAPHY = {
       extraBold: '800',
       bold: '700',
       medium: '500',
+      light: '300',
     },
   },
   size: {
