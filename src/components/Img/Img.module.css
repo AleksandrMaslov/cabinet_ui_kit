@@ -3,10 +3,10 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  background-color: var(--lightgrey);
 }
 
 .img_loading {
+  background-color: var(--lightgrey);
   background-size: 200% 100%;
   background-repeat: no-repeat;
   background-image: linear-gradient(

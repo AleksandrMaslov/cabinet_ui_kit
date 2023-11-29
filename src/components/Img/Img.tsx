@@ -4,14 +4,17 @@ import classes from './Img.module.css'
 
 interface ImgProps {
   src?: string
+  loader?: boolean
   className?: string
 }
 
-const Img: FC<ImgProps> = ({ src, className }) => {
-  const [imgSrc, setImgSrc] = useState<string | undefined>(undefined)
+const Img: FC<ImgProps> = ({ src, className, loader = false }) => {
+  const [imgSrc, setImgSrc] = useState<string | undefined>(
+    loader ? undefined : src,
+  )
 
   const rootClasses = [classes.img]
-  if (!imgSrc) rootClasses.push(classes.img_loading)
+  if (loader && !imgSrc) rootClasses.push(classes.img_loading)
   if (className) rootClasses.push(className)
 
   useEffect(() => {

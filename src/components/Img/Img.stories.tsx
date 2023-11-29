@@ -24,6 +24,12 @@ const meta: Meta<typeof Img> = {
         defaultValue: { summary: 'undefined' },
       },
     },
+    loader: {
+      description: 'Путь к файлу изображения',
+      table: {
+        category: 'Optional',
+      },
+    },
     className: {
       description: 'Имя внешнего CSS класса для позиционирования',
       table: {
@@ -40,6 +46,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     src: undefined,
+    loader: false,
     className: undefined,
   },
 }
@@ -47,6 +54,23 @@ export const Default: Story = {
 export const Placeholder: Story = {
   args: {
     src: 'https://placehold.jp/600x600.png',
+    loader: false,
+    className: undefined,
+  },
+}
+
+export const Loader: Story = {
+  args: {
+    src: undefined,
+    loader: true,
+    className: undefined,
+  },
+}
+
+export const LoaderWithPlaceholder: Story = {
+  args: {
+    src: 'https://placehold.jp/600x600.png',
+    loader: true,
     className: undefined,
   },
 }
