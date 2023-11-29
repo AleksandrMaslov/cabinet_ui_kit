@@ -3,7 +3,7 @@ import { FC, MouseEventHandler } from 'react'
 import classes from './Button.module.css'
 
 interface ButtonProps {
-  children: string
+  label: string
   color?: 'green' | 'lightgrey' | 'black'
   inverted?: boolean
   size?: 'small'
@@ -13,7 +13,7 @@ interface ButtonProps {
 }
 
 const Button: FC<ButtonProps> = ({
-  children,
+  label,
   color,
   inverted,
   size,
@@ -28,7 +28,7 @@ const Button: FC<ButtonProps> = ({
 
   return (
     <button className={rootClasses.join(' ')} {...props}>
-      {children}
+      {label}
     </button>
   )
 }

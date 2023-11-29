@@ -18,9 +18,11 @@ const meta: Meta<typeof Modal> = {
 
       return (
         <div className="wrapper_preview">
-          <Button className="button_preview" onClick={clickHandler}>
-            SHOW
-          </Button>
+          <Button
+            label="SHOW"
+            className="button_preview"
+            onClick={clickHandler}
+          />
 
           {visible && <Story setVisible={setVisible} />}
         </div>

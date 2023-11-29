@@ -10,7 +10,7 @@ const meta: Meta<typeof Button> = {
   },
   tags: ['autodocs'],
   argTypes: {
-    children: {
+    label: {
       table: {
         category: 'Required',
         type: { summary: 'string' },
@@ -71,7 +71,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    children: 'Click Me',
+    label: 'Click Me',
     inverted: false,
     color: undefined,
     size: undefined,
@@ -83,7 +83,7 @@ export const Default: Story = {
 
 export const Small: Story = {
   args: {
-    children: 'Click Me',
+    label: 'Click Me',
     size: 'small',
     inverted: false,
   },
@@ -91,7 +91,7 @@ export const Small: Story = {
 
 export const Black: Story = {
   args: {
-    children: 'Click Me',
+    label: 'Click Me',
     color: 'black',
     inverted: false,
   },
@@ -99,7 +99,7 @@ export const Black: Story = {
 
 export const Green: Story = {
   args: {
-    children: 'Click Me',
+    label: 'Click Me',
     color: 'green',
     inverted: false,
   },
@@ -118,7 +118,7 @@ export const Green: Story = {
 
 export const GreenInverted: Story = {
   args: {
-    children: 'Click Me',
+    label: 'Click Me',
     color: 'green',
     inverted: true,
   },
@@ -137,7 +137,7 @@ export const GreenInverted: Story = {
 
 export const LightGrey: Story = {
   args: {
-    children: 'Click Me',
+    label: 'Click Me',
     color: 'lightgrey',
     inverted: false,
   },
@@ -156,7 +156,7 @@ export const LightGrey: Story = {
 
 export const LightGreyInverted: Story = {
   args: {
-    children: 'Click Me',
+    label: 'Click Me',
     color: 'lightgrey',
     inverted: true,
   },
