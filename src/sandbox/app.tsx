@@ -1,6 +1,8 @@
 import { FC, useState } from 'react'
 
-import { Button, Input, Logo, Modal } from '..'
+import { Button, Input, Logo, Modal, SpaceCard } from '..'
+
+import { space } from './data/space.ts'
 
 const App: FC = () => {
   const [visible, setVisible] = useState<boolean>(false)
@@ -8,21 +10,22 @@ const App: FC = () => {
   return (
     <div
       style={{
-        padding: '30px',
+        padding: '3rem',
+        gap: '2rem',
         display: 'flex',
         flexDirection: 'column',
-        gap: '20px',
       }}
     >
       <Logo />
 
       <Button
+        label="Visible"
         onClick={() => {
           setVisible(true)
         }}
-      >
-        Visible
-      </Button>
+      />
+
+      <SpaceCard space={space} />
 
       {visible && (
         <Modal title="Связаться с нами" setVisible={setVisible}>
@@ -30,13 +33,13 @@ const App: FC = () => {
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: '20px',
+              gap: '2rem',
             }}
           >
             <Input label="Input" placeholder="Place" bordered />
             <Input label="Input" placeholder="Place" required />
 
-            <Button type="submit">Submit</Button>
+            <Button label="Submit" type="submit" />
           </form>
         </Modal>
       )}
