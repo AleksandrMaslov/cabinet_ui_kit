@@ -17,15 +17,11 @@ const meta: Meta<typeof Modal> = {
       }
 
       return (
-        <div
-          style={{
-            width: '50vw',
-            height: '30vw',
-            display: 'grid',
-            alignContent: 'center',
-          }}
-        >
-          <Button onClick={clickHandler}>SHOW</Button>
+        <div className="wrapper_preview">
+          <Button className="button_preview" onClick={clickHandler}>
+            SHOW
+          </Button>
+
           {visible && <Story setVisible={setVisible} />}
         </div>
       )
