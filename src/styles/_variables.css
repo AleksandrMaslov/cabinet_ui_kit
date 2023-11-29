@@ -9,6 +9,5 @@
   --blue: #83afcd;
   --milk: #ecdbc5;
 
-  /* --font-size: calc(100vw / 1920 * 10) / 1.33;
-  --full-screen: calc(var(--vh, 1vh) * 100); */
+  --font-size: calc(100vw / 1920 * 10);
 }
