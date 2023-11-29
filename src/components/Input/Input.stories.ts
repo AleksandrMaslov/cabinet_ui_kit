@@ -11,7 +11,7 @@ const meta: Meta<typeof Input> = {
   tags: ['autodocs'],
   argTypes: {
     placeholder: {
-      description: 'Подпись элемента ввода',
+      description: 'Впомогательный текст в поле ввода данных',
       table: {
         category: 'Optional',
         defaultValue: { summary: 'undefined' },
@@ -45,7 +45,7 @@ const meta: Meta<typeof Input> = {
     type: {
       description: 'Подпись элемента ввода',
       table: {
-        category: 'Required',
+        category: 'Optional',
       },
     },
     onChange: {
@@ -93,9 +93,9 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    type: 'text',
     label: 'Label',
     placeholder: 'Placeholder',
+    type: 'text',
     name: undefined,
     id: undefined,
     value: undefined,
