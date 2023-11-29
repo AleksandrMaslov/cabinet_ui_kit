@@ -43,7 +43,7 @@ interface IconProps {
   className?: string
 }
 
-const Icon: FC<IconProps> = ({ icon, color, size = '100px', className }) => {
+const Icon: FC<IconProps> = ({ icon, color, size = '10rem', className }) => {
   const rootClasses = [classes.icon]
   if (color) rootClasses.push(`icon_${color}`)
   if (className) rootClasses.push(className)

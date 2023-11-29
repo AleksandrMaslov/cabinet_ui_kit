@@ -4,7 +4,7 @@
   --border-color: var(--black);
 
   color: var(--font-color);
-  border: 1.5px solid var(--border-color);
+  border: 0.15rem solid var(--border-color);
 
   background-size: 205% 100%;
   background-position: left 0 top 0;
@@ -20,7 +20,7 @@
     var(--bg-color)
   );
 
-  padding: 15px 30px;
+  padding: 1.5rem 3rem;
   cursor: pointer;
 
   font-family: 'Jost', sans-serif;

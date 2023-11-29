@@ -11,7 +11,7 @@ interface LogoProps {
 const Logo: FC<LogoProps> = ({
   className,
   color = 'black',
-  height = '35px',
+  height = '3.5rem',
 }) => {
   const rootClasses = [classes.logo]
   if (color) rootClasses.push(classes[`logo_${color}`])

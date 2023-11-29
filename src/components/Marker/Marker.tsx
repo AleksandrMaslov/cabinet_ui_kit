@@ -8,7 +8,7 @@ interface MarkerProps {
   className?: string
 }
 
-const Marker: FC<MarkerProps> = ({ tooltip, className, size = '30px' }) => {
+const Marker: FC<MarkerProps> = ({ tooltip, className, size = '3rem' }) => {
   const rootClasses = [classes.marker]
   if (tooltip) rootClasses.push(classes[`marker_tooltiped`])
   if (className) rootClasses.push(className)
