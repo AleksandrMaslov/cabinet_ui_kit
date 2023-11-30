@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
 
-import { Button, Input, Logo, Modal, SpaceCard } from '..'
+import { Anchor, Button, Input, Logo, Modal, SpaceCard } from '..'
 
 import { space } from './data/space.ts'
 
@@ -17,6 +17,8 @@ const App: FC = () => {
       }}
     >
       <Logo />
+
+      <Anchor>TEST</Anchor>
 
       <Button
         label="Visible"

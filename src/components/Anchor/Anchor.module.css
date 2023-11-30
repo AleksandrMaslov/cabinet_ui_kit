@@ -8,9 +8,9 @@
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -0.1em;
+  height: 0.1em;
   width: 0;
-  height: 0.15rem;
   transition:
     width 0.2s ease-out,
     opacity 0.2s ease-out;
