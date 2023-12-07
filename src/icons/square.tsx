@@ -11,8 +11,9 @@ const SvgSquare: FC<SvgSquareProps> = ({ className }) => {
       xmlns="http://www.w3.org/2000/svg"
       width="50"
       height="50"
+      viewBox="0 0 50 50"
     >
-      <rect width="50" height="50" fill="#111" stroke="#111" strokeWidth="1" />
+      <rect fill="#111" strokeWidth="0" />
     </svg>
   )
 }
