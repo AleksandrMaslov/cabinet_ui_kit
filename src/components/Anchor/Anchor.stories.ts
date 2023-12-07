@@ -33,6 +33,14 @@ const meta: Meta<typeof Anchor> = {
         defaultValue: { summary: 'undefined' },
       },
     },
+    target: {
+      description: 'Определяет окном открытия гиперссылки / якоря',
+      options: ['_blank', '_self', '_parent', '_top'],
+      table: {
+        category: 'Optional',
+        defaultValue: { summary: '_self' },
+      },
+    },
     lineColor: {
       options: ['undefined', 'white', 'orange'],
       description: 'Цвет линии подчеркивания',

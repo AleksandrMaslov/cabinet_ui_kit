@@ -5,6 +5,7 @@ import classes from './Anchor.module.css'
 interface AnchorProps {
   children: ReactNode
   href?: string
+  target?: '_blank' | '_self' | '_parent' | '_top'
   lineColor?: 'white' | 'orange'
   underlined?: boolean
   className?: string
