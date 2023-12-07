@@ -23,7 +23,7 @@ const Button: FC<ButtonProps> = ({
   const rootClasses = [classes.button]
   if (size) rootClasses.push(classes[`button_${size}`])
   if (color) rootClasses.push(classes[`button_${color}`])
-  if (inverted) rootClasses.push(classes[`button_inverted`])
+  if (inverted) rootClasses.push(classes.button_inverted)
   if (className) rootClasses.push(className)
 
   return (
