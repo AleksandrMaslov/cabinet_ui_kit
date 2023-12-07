@@ -46,6 +46,10 @@
   background-color: var(--black);
 }
 
+.marker_positioned {
+  position: absolute;
+}
+
 @keyframes markerAnimation {
   0% {
     box-shadow: 0rem 0rem 0rem 0.5rem rgba(0, 0, 0, 0.75);
