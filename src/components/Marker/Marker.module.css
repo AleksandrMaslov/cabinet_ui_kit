@@ -6,6 +6,7 @@
   font-weight: 500;
   font-size: 2rem;
   line-height: 2.6em;
+  transform: translate(-50%, -50%);
   animation: 1.5s linear infinite markerAnimation;
 }
 
