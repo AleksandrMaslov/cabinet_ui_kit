@@ -60,6 +60,10 @@
   margin-left: 1em;
 }
 
+.option {
+  text-align: left;
+}
+
 .option::marker {
   font-size: 1em;
 }
@@ -72,6 +76,7 @@
 }
 
 .sales {
+  text-align: left;
   text-wrap: balance;
 }
 
