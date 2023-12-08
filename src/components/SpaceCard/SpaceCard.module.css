@@ -29,6 +29,7 @@
 }
 
 .title {
+  text-align: left;
   letter-spacing: initial;
   font-weight: 500;
 }
