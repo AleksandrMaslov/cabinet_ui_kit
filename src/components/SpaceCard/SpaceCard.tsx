@@ -15,10 +15,11 @@ interface ISpace {
   ownMeeting: boolean
   options: string[]
   price: {
-    monthly: number
-    quarterly: number
-    yearly: number
+    short: string
+    medium: string
+    long: string
   }
+  sales: string
 }
 
 interface SpaceCardProps {
@@ -37,8 +38,17 @@ const SpaceCard: FC<SpaceCardProps> = ({
   const rootClasses = [classes.spaceCard]
   if (className) rootClasses.push(className)
 
-  const { name, img, area, workspaces, screen, ownMeeting, options, price } =
-    space
+  const {
+    name,
+    img,
+    area,
+    workspaces,
+    screen,
+    ownMeeting,
+    options,
+    price,
+    sales,
+  } = space
 
   return (
     <article className={rootClasses.join(' ')}>
@@ -93,16 +103,13 @@ const SpaceCard: FC<SpaceCardProps> = ({
 
         {price && (
           <div className={classes.prices}>
-            <span>{`${price.monthly.toLocaleString()}₽/мес`}</span>
-            <span>{`${price.quarterly.toLocaleString()}₽/квартал*`}</span>
-            <span>{`${price.yearly.toLocaleString()}₽/год*`}</span>
+            {price.short && <span>{price.short}</span>}
+            {price.medium && <span>{price.medium}</span>}
+            {price.long && <span>{price.long}</span>}
           </div>
         )}
 
-        <p className={classes.sales}>
-          * Действует система скидок для резидентов. Более подробную информацию
-          уточняйте у менеджеров или в личном кабинете
-        </p>
+        <p className={classes.sales}>{sales}</p>
 
         <div className={classes.controls}>
           <Button

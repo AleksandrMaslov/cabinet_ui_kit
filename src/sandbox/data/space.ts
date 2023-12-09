@@ -32,8 +32,9 @@ export const space = {
     dailyCleaning,
   ],
   price: {
-    monthly: 46000,
-    quarterly: 120000,
-    yearly: 560000,
+    short: '46 000 ₽/мес',
+    medium: '120 000 ₽/квартал*',
+    long: '560 000 ₽/год*',
   },
+  sales: '* Специальные условия',
 }
