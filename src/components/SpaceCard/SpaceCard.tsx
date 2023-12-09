@@ -55,7 +55,7 @@ const SpaceCard: FC<SpaceCardProps> = ({
       <Img className={classes.img} src={img} loader />
 
       <div className={classes.content}>
-        <h2 className={classes.title}>&#171;{name}&#187;</h2>
+        <h3 className={classes.title}>&#171;{name}&#187;</h3>
 
         <div className={classes.parameters}>
           <div className={classes.wrapper}>
