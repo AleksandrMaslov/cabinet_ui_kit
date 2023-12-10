@@ -52,7 +52,7 @@ const SpaceCard: FC<SpaceCardProps> = ({
 
   return (
     <article className={rootClasses.join(' ')}>
-      <Img className={classes.img} src={img} loader />
+      <Img className={classes.img} src={img} />
 
       <div className={classes.content}>
         <h3 className={classes.title}>&#171;{name}&#187;</h3>
