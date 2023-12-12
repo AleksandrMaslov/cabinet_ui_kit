@@ -1,5 +1,5 @@
 :root {
-  font-size: var(--font-size, 10px);
+  font-size: max(6.66667px, var(--font-size, 10px));
   font-family: var(--font-primary);
 }
 
@@ -47,4 +47,22 @@ h5 {
 
 h6 {
   font-size: 2rem;
+}
+
+@media (width < 1280px) {
+  h1 {
+    font-size: clamp(27px, calc(27px + (75 - 27) * (0.0625vw - 0.2px)), 7.5rem);
+  }
+
+  h2 {
+    font-size: clamp(22px, calc(22px + (60 - 22) * (0.0625vw - 0.2px)), 6rem);
+  }
+
+  h3 {
+    font-size: clamp(22px, calc(22px + (50 - 22) * (0.0625vw - 0.2px)), 5rem);
+  }
+
+  h4 {
+    font-size: clamp(14px, calc(14px + (27 - 14) * (0.0625vw - 0.2px)), 2.7rem);
+  }
 }
