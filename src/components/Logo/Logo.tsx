@@ -1,10 +1,13 @@
-import { FC } from 'react'
+import { FC, MouseEventHandler } from 'react'
 
 import classes from './Logo.module.css'
 
 interface LogoProps {
   height?: string
   color?: 'white'
+  href?: string
+  target?: '_blank' | '_self' | '_parent' | '_top'
+  onClick?: MouseEventHandler<HTMLAnchorElement>
   className?: string
 }
 
@@ -12,13 +15,18 @@ const Logo: FC<LogoProps> = ({
   className,
   color = 'black',
   height = '3.5rem',
+  ...restProps
 }) => {
   const rootClasses = [classes.logo]
   if (color) rootClasses.push(classes[`logo_${color}`])
+
+  const { href, onClick } = restProps
+  if (href || onClick) rootClasses.push(classes.logo_pointer)
+
   if (className) rootClasses.push(className)
 
   return (
-    <div className={rootClasses.join(' ')} style={{ height }}>
+    <a className={rootClasses.join(' ')} style={{ height }} {...restProps}>
       <svg
         className={classes.svg}
         width="225"
@@ -60,7 +68,7 @@ const Logo: FC<LogoProps> = ({
           fill="#1F1F1F"
         />
       </svg>
-    </div>
+    </a>
   )
 }
 

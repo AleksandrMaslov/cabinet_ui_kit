@@ -28,11 +28,32 @@ const meta: Meta<typeof Logo> = {
       },
     },
     height: {
-      options: ['undefined', 'small'],
-      description: 'Размер, определяемый внутренними отступами',
+      description: 'Высота логотипа',
       table: {
         category: 'Optional',
       },
+    },
+    href: {
+      description: 'Гипертекстовая ссылка',
+      table: {
+        category: 'Optional',
+        defaultValue: { summary: 'undefined' },
+      },
+    },
+    target: {
+      description: 'Определяет окно открытия гиперссылки / якоря',
+      options: ['_blank', '_self', '_parent', '_top'],
+      table: {
+        category: 'Optional',
+        defaultValue: { summary: '_self' },
+      },
+    },
+    onClick: {
+      table: {
+        category: 'Optional',
+        defaultValue: { summary: 'undefined' },
+      },
+      description: 'Обработчик события нажатия на логотип',
     },
     className: {
       description: 'Имя внешнего CSS класса для позиционирования',
@@ -48,7 +69,14 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
-  args: {},
+  args: {
+    height: undefined,
+    color: undefined,
+    href: undefined,
+    target: undefined,
+    onClick: undefined,
+    className: undefined,
+  },
 }
 
 export const White: Story = {
