@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import { FC, MouseEventHandler, ReactNode } from 'react'
 
 import classes from './Anchor.module.css'
 
@@ -6,6 +6,7 @@ interface AnchorProps {
   children: ReactNode
   href?: string
   target?: '_blank' | '_self' | '_parent' | '_top'
+  onClick?: MouseEventHandler<HTMLAnchorElement>
   lineColor?: 'white' | 'orange'
   underlined?: boolean
   className?: string
@@ -24,7 +25,7 @@ const Anchor: FC<AnchorProps> = ({
   if (className) rootClasses.push(className)
 
   return (
-    <a {...restProps} className={rootClasses.join(' ')}>
+    <a className={rootClasses.join(' ')} {...restProps}>
       {children}
     </a>
   )

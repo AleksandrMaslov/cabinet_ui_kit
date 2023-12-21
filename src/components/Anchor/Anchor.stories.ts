@@ -34,12 +34,19 @@ const meta: Meta<typeof Anchor> = {
       },
     },
     target: {
-      description: 'Определяет окном открытия гиперссылки / якоря',
+      description: 'Определяет окно открытия гиперссылки / якоря',
       options: ['_blank', '_self', '_parent', '_top'],
       table: {
         category: 'Optional',
         defaultValue: { summary: '_self' },
       },
+    },
+    onClick: {
+      table: {
+        category: 'Optional',
+        defaultValue: { summary: 'undefined' },
+      },
+      description: 'Обработчик события нажатия на ссылку',
     },
     lineColor: {
       options: ['undefined', 'white', 'orange'],
@@ -73,6 +80,9 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     children: 'Anchor',
+    href: undefined,
+    target: undefined,
+    onClick: undefined,
     underlined: false,
   },
 }
