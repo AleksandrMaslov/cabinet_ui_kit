@@ -35,10 +35,32 @@ const meta: Meta<typeof Icon> = {
       },
     },
     size: {
-      description: 'Размер компонента',
+      description: 'Размер компонента иконки',
       table: {
         category: 'Optional',
       },
+    },
+    href: {
+      description: 'Гипертекстовая ссылка',
+      table: {
+        category: 'Optional',
+        defaultValue: { summary: 'undefined' },
+      },
+    },
+    target: {
+      description: 'Определяет окно открытия гиперссылки',
+      options: ['_blank', '_self', '_parent', '_top'],
+      table: {
+        category: 'Optional',
+        defaultValue: { summary: '_self' },
+      },
+    },
+    onClick: {
+      table: {
+        category: 'Optional',
+        defaultValue: { summary: 'undefined' },
+      },
+      description: 'Обработчик события нажатия на иконку',
     },
     className: {
       description: 'Имя внешнего CSS класса для позиционирования',
@@ -56,6 +78,12 @@ type Story = StoryObj<typeof meta>
 export const Telegram: Story = {
   args: {
     icon: 'telegram',
+    color: undefined,
+    size: undefined,
+    href: undefined,
+    target: undefined,
+    onClick: undefined,
+    className: undefined,
   },
 }
 
