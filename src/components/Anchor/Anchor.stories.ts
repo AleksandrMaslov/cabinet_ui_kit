@@ -34,7 +34,7 @@ const meta: Meta<typeof Anchor> = {
       },
     },
     target: {
-      description: 'Определяет окно открытия гиперссылки / якоря',
+      description: 'Определяет окно открытия гиперссылки',
       options: ['_blank', '_self', '_parent', '_top'],
       table: {
         category: 'Optional',
