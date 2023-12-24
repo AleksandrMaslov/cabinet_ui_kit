@@ -52,7 +52,7 @@ const SpaceCard: FC<SpaceCardProps> = ({
 
   return (
     <article className={rootClasses.join(' ')}>
-      <Img className={classes.img} src={img} />
+      <Img src={img} />
 
       <div className={classes.content}>
         <h3 className={classes.title}>&#171;{name}&#187;</h3>
@@ -113,6 +113,7 @@ const SpaceCard: FC<SpaceCardProps> = ({
 
         <div className={classes.controls}>
           <Button
+            className={classes.btn}
             label="ЗАБРОНИРОВАТЬ ОНЛАЙН"
             onClick={onBookClick}
             color="green"
@@ -120,6 +121,7 @@ const SpaceCard: FC<SpaceCardProps> = ({
           />
 
           <Button
+            className={classes.btn}
             label="ОСТАВИТЬ ЗАЯВКУ"
             onClick={onRequestClick}
             color="green"

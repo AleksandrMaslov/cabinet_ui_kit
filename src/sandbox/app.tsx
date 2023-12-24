@@ -1,6 +1,8 @@
 import { FC, useState } from 'react'
 
-import { Button, Icon, Input, Logo, Modal } from '..'
+import { Button, Icon, Input, Logo, Marker, Modal, SpaceCard } from '..'
+
+import { space } from './data/space'
 
 const App: FC = () => {
   const [visible, setVisible] = useState<boolean>(false)
@@ -25,6 +27,10 @@ const App: FC = () => {
           setVisible(true)
         }}
       />
+
+      <Marker coords={['50%', '']} />
+
+      <SpaceCard space={space} />
 
       {visible && (
         <Modal title="Связаться с нами" setVisible={setVisible}>

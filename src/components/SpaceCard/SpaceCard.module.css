@@ -1,29 +1,24 @@
 .spaceCard {
+  --size-30-70-inf: max(30px, calc(30px + 40 * (0.0625vw - 0.2px)));
+  --size-20-70-inf: max(20px, calc(20px + 50 * (0.0625vw - 0.2px)));
+  --size-14-22-inf: max(14px, calc(14px + 8 * (0.0625vw - 0.2px)));
+  --size-10-30-inf: max(10px, calc(10px + 20 * (0.0625vw - 0.2px)));
+
+  display: grid;
+  grid-template-rows: 72rem;
+  grid-template-columns: repeat(2, minmax(140px, 76rem));
+
   color: var(--white);
   font-size: 2rem;
   line-height: 1.3em;
-
-  width: 152rem;
-  height: 70rem;
-
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr;
-
   background-color: var(--green);
 }
 
-.img {
-  height: 70rem;
-}
-
 .content {
-  /* flex: 1 1 auto; */
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  padding: 5rem 7rem;
+  padding: var(--size-30-70-inf) var(--size-20-70-inf);
 }
 
 .title {
@@ -41,10 +36,13 @@
 
 .wrapper {
   display: flex;
-  gap: 4rem;
+  flex-wrap: wrap;
+  column-gap: 4rem;
+  row-gap: 1.5rem;
 }
 
 .parameter {
+  flex: 0 0 auto;
   display: flex;
   gap: 1.5rem;
   align-items: center;
@@ -55,6 +53,7 @@
 }
 
 .options {
+  list-style-type: disc;
   display: grid;
   gap: 1rem;
   margin-left: 1em;
@@ -72,7 +71,9 @@
   font-size: 2.2rem;
   font-weight: 500;
   display: flex;
-  gap: 3rem;
+  flex-wrap: wrap;
+  column-gap: var(--size-10-30-inf);
+  row-gap: 10px;
 }
 
 .sales {
@@ -83,5 +84,30 @@
 .controls {
   margin-top: auto;
   display: flex;
-  gap: 2rem;
+  column-gap: 2rem;
+  row-gap: 15px;
+}
+
+.btn {
+  width: fit-content;
+  white-space: nowrap;
+}
+
+@media (width < 1280px) {
+  .options {
+    display: none;
+  }
+  .controls {
+    flex-direction: column;
+  }
+}
+
+@media (width < 890px) {
+  .spaceCard {
+    grid-template-rows: 200px 350px;
+    grid-template-columns: 100%;
+  }
+  .sales {
+    display: none;
+  }
 }
