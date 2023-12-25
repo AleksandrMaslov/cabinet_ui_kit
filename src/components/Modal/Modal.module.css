@@ -1,5 +1,5 @@
 .cover {
-  z-index: 100;
+  z-index: 999;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -8,84 +8,41 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
 }
 
 .modal {
-  min-width: 20rem;
-  display: flex;
-  flex-direction: column;
+  --size-50-70-inf: max(50px, calc(50px + 20 * (0.0625vw - 0.2px)));
+  --size-20-70-inf: max(20px, calc(20px + 50 * (0.0625vw - 0.2px)));
+  --size-20-30-inf: max(20px, calc(20px + 10 * (0.0625vw - 0.2px)));
+
+  position: relative;
   background-color: var(--white);
 }
 
-.title {
-  margin: 7rem 7rem 0rem 7rem;
-  font-family: var(--font-special);
-  font-weight: 700;
-  font-size: 5rem;
-  line-height: 1em;
-  letter-spacing: initial;
+.container {
+  margin: var(--size-50-70-inf) var(--size-20-70-inf);
 }
 
-.content {
-  flex: 1 1 auto;
-  margin: 5rem 7rem 7rem 7rem;
+.close {
+  position: absolute;
+  top: 3rem;
+  right: var(--size-20-30-inf);
+
+  --size: var(--size-20-30-inf);
+  width: var(--size) !important;
+  height: var(--size) !important;
+
+  transition: all 0.1s ease-out;
 }
 
-@keyframes coverAnimation {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
+.close:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0.3rem 0.3rem 0.3rem var(--grey));
 }
 
-@keyframes inCoverAnimation {
-  0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-@keyframes outCoverAnimation {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes modalAnimation {
-  0% {
-    scale: 0.7;
-  }
-  100% {
-    scale: 1;
-  }
-}
-
-@keyframes inModalAnimation {
-  0% {
-    scale: 0.7;
-  }
-  100% {
-    scale: 1;
-  }
-}
-
-@keyframes outModalAnimation {
-  0% {
-    scale: 1;
-  }
-  100% {
-    scale: 0.7;
-  }
+.close:active {
+  transform: scale(0.95);
+  filter: drop-shadow(0 0 0 var(--grey));
 }

@@ -1,45 +1,35 @@
-import { FC, MouseEventHandler, ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 import ReactDOM from 'react-dom'
+
+import Icon from '../Icon/Icon'
 
 import classes from './Modal.module.css'
 
 interface ModalProps {
-  title: string
   setVisible: (value: boolean) => void
   children?: ReactNode
-  width?: string
   className?: string
 }
 
 const portal = document.getElementById('portal') as HTMLDivElement
 
-const Modal: FC<ModalProps> = ({
-  title,
-  setVisible,
-  className,
-  children,
-  width,
-}) => {
+const Modal: FC<ModalProps> = ({ setVisible, className, children }) => {
   const modalClasses = [classes.modal]
   if (className) modalClasses.push(className)
 
-  const coverClickHandler = () => setVisible(false)
-
-  const modalClickHandler: MouseEventHandler<HTMLDivElement> = e =>
-    e.stopPropagation()
+  const closeHandler = () => setVisible(false)
 
   const component = (
-    <section className={classes.cover} onClick={coverClickHandler}>
+    <div className={classes.cover} onClick={closeHandler}>
       <div
         className={modalClasses.join(' ')}
-        onClick={modalClickHandler}
-        style={{ width }}
+        onClick={e => e.stopPropagation()}
       >
-        <header className={classes.title}>{title}</header>
+        <Icon className={classes.close} icon="cross" onClick={closeHandler} />
 
-        <main className={classes.content}>{children}</main>
+        <div className={classes.container}>{children}</div>
       </div>
-    </section>
+    </div>
   )
 
   if (portal) ReactDOM.createPortal(component, portal)

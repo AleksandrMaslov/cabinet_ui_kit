@@ -33,7 +33,7 @@ const App: FC = () => {
       <SpaceCard space={space} />
 
       {visible && (
-        <Modal title="Связаться с нами" setVisible={setVisible}>
+        <Modal setVisible={setVisible}>
           <form
             style={{
               display: 'flex',
@@ -41,6 +41,8 @@ const App: FC = () => {
               gap: '2rem',
             }}
           >
+            <h3>Связаться с нами</h3>
+
             <Input label="Input" placeholder="Place" bordered />
             <Input label="Input" placeholder="Place" required />
 

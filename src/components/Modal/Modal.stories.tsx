@@ -34,13 +34,6 @@ const meta: Meta<typeof Modal> = {
   },
   tags: ['autodocs'],
   argTypes: {
-    title: {
-      description: 'Заголовок модального окна',
-      table: {
-        category: 'Required',
-        defaultValue: { summary: 'undefined' },
-      },
-    },
     setVisible: {
       description: 'Функция управления состоянием видимости',
       table: {
@@ -53,13 +46,6 @@ const meta: Meta<typeof Modal> = {
       table: {
         category: 'Optional',
         type: { summary: 'ReactNode' },
-        defaultValue: { summary: 'undefined' },
-      },
-    },
-    width: {
-      description: 'Управление шириной модального окна',
-      table: {
-        category: 'Optional',
         defaultValue: { summary: 'undefined' },
       },
     },
@@ -82,13 +68,15 @@ export function Default(args: any, context: { setVisible: any }) {
   return (
     <Modal
       {...{
-        title: 'Modal Header',
         children: 'Modal Content',
-        width: undefined,
         setVisible: undefined,
         className: undefined,
       }}
       setVisible={setVisible}
-    />
+    >
+      <h3>Заголовок формы</h3>
+
+      <p>Содержание формы</p>
+    </Modal>
   )
 }
