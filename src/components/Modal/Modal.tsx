@@ -32,7 +32,7 @@ const Modal: FC<ModalProps> = ({ setVisible, className, children }) => {
     </div>
   )
 
-  if (portal) ReactDOM.createPortal(component, portal)
+  if (portal) return ReactDOM.createPortal(component, portal)
   return component
 }
 
