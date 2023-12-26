@@ -10,6 +10,12 @@
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(3px);
+  transition: opacity 0.2s ease-in;
+  animation: opacity 0.2s ease-in;
+}
+
+.cover_out {
+  opacity: 0;
 }
 
 .modal {
@@ -19,6 +25,15 @@
 
   position: relative;
   background-color: var(--white);
+  transition: all 0.2s ease-in;
+  animation:
+    opacity 0.2s ease-in,
+    scale 0.2s ease-in;
+}
+
+.modal_out {
+  opacity: 0;
+  transform: scale(0.5);
 }
 
 .container {
@@ -45,4 +60,22 @@
 .close:active {
   transform: scale(0.95);
   filter: drop-shadow(0 0 0 var(--grey));
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale {
+  0% {
+    scale: 0.5;
+  }
+  100% {
+    scale: 1;
+  }
 }

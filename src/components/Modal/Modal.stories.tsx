@@ -11,9 +11,9 @@ const meta: Meta<typeof Modal> = {
   component: Modal,
   decorators: [
     (Story: StoryFn) => {
-      const [visible, setVisible] = useState<boolean>(false)
+      const [isVisible, setVisible] = useState<boolean>(false)
       const clickHandler = () => {
-        setVisible(!visible)
+        setVisible(!isVisible)
       }
 
       return (
@@ -24,7 +24,7 @@ const meta: Meta<typeof Modal> = {
             onClick={clickHandler}
           />
 
-          {visible && <Story setVisible={setVisible} />}
+          {isVisible && <Story isVisible={isVisible} setVisible={setVisible} />}
         </div>
       )
     },
@@ -34,6 +34,13 @@ const meta: Meta<typeof Modal> = {
   },
   tags: ['autodocs'],
   argTypes: {
+    isVisible: {
+      description: 'Состояние видимости модального окна',
+      table: {
+        category: 'Required',
+        defaultValue: { summary: 'undefined' },
+      },
+    },
     setVisible: {
       description: 'Функция управления состоянием видимости',
       table: {
@@ -62,17 +69,20 @@ const meta: Meta<typeof Modal> = {
 
 export default meta
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function Default(args: any, context: { setVisible: any }) {
-  const { setVisible } = context
+export function Default(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  args: any,
+  context: { isVisible: boolean; setVisible: () => void },
+) {
+  const { isVisible, setVisible } = context
   return (
     <Modal
       {...{
         children: 'Modal Content',
-        setVisible: undefined,
+        isVisible: isVisible,
+        setVisible: setVisible,
         className: undefined,
       }}
-      setVisible={setVisible}
     >
       <h3>Заголовок формы</h3>
 

@@ -5,7 +5,7 @@ import { Button, Icon, Input, Logo, Marker, Modal, SpaceCard } from '..'
 import { space } from './data/space'
 
 const App: FC = () => {
-  const [visible, setVisible] = useState<boolean>(false)
+  const [isVisible, setVisible] = useState<boolean>(false)
 
   return (
     <div
@@ -32,8 +32,8 @@ const App: FC = () => {
 
       <SpaceCard space={space} />
 
-      {visible && (
-        <Modal setVisible={setVisible}>
+      {isVisible && (
+        <Modal isVisible={isVisible} setVisible={setVisible}>
           <form
             style={{
               display: 'flex',
