@@ -1,12 +1,16 @@
 .dotsLoader {
   position: relative;
   display: inline-block;
-  color: inherit;
   line-height: inherit;
   vertical-align: middle;
 
-  transform: translateY(-1em);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(0em - 1.1em - 50%));
+
   font-size: 1em;
+  color: var(--black);
 }
 .dotsLoader,
 .dotsLoader:before,
@@ -31,13 +35,38 @@
   animation-delay: 0.32s;
 }
 
+.dotsLoader_green {
+  color: var(--green);
+}
+.dotsLoader_orange {
+  color: var(--orange);
+}
+.dotsLoader_lightgreen {
+  color: var(--lightgreen);
+}
+.dotsLoader_blue {
+  color: var(--blue);
+}
+.dotsLoader_milk {
+  color: var(--milk);
+}
+.dotsLoader_white {
+  color: var(--white);
+}
+.dotsLoader_lightgrey {
+  color: var(--lightgrey);
+}
+.dotsLoader_grey {
+  color: var(--grey);
+}
+
 @keyframes dots {
   0%,
   80%,
   100% {
-    box-shadow: 0 1em 0 -1em;
+    box-shadow: 0 1.1em 0 -1em;
   }
   40% {
-    box-shadow: 0 1em 0 0;
+    box-shadow: 0 1.1em 0 0;
   }
 }
