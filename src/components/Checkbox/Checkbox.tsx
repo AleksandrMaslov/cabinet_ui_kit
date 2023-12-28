@@ -34,7 +34,7 @@ const Checkbox: FC<CheckboxProps> = ({
   defaultChecked = false,
 }) => {
   const rootClasses = [classes.checkbox]
-  if (color) rootClasses.push(`checkbox_${color}`)
+  if (color) rootClasses.push(classes[`checkbox_${color}`])
   if (className) rootClasses.push(className)
 
   const onChangeHandler: InputChangeHandler =

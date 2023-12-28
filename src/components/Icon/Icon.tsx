@@ -54,7 +54,7 @@ const Icon: FC<IconProps> = ({
   ...restProps
 }) => {
   const rootClasses = [classes.icon]
-  if (color) rootClasses.push(`icon_${color}`)
+  if (color) rootClasses.push(classes[`icon_${color}`])
 
   const { href, onClick } = restProps
   if (href || onClick) rootClasses.push(classes.icon_pointer)
