@@ -47,6 +47,22 @@ const meta: Meta<typeof Button> = {
         defaultValue: { summary: false },
       },
     },
+    disabled: {
+      control: 'boolean',
+      description: 'Не активное состояние компонента',
+      table: {
+        category: 'Optional',
+        defaultValue: { summary: false },
+      },
+    },
+    isLoading: {
+      control: 'boolean',
+      description: 'Состояние загрузки компонента',
+      table: {
+        category: 'Optional',
+        defaultValue: { summary: false },
+      },
+    },
     size: {
       control: 'inline-radio',
       options: ['undefined', 'small'],
@@ -77,7 +93,23 @@ export const Default: Story = {
     size: undefined,
     type: undefined,
     onClick: undefined,
+    isLoading: false,
+    disabled: false,
     className: undefined,
+  },
+}
+
+export const Loading: Story = {
+  args: {
+    label: 'Click Me',
+    isLoading: true,
+  },
+}
+
+export const Disabled: Story = {
+  args: {
+    label: 'Click Me',
+    disabled: true,
   },
 }
 

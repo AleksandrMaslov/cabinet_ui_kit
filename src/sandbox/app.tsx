@@ -1,8 +1,6 @@
 import { FC, useState } from 'react'
 
-import { Button, Icon, Input, Logo, Marker, Modal, SpaceCard } from '..'
-
-import { space } from './data/space'
+import { Button, Input, Modal } from '..'
 
 const App: FC = () => {
   const [isVisible, setVisible] = useState<boolean>(false)
@@ -16,11 +14,6 @@ const App: FC = () => {
         flexDirection: 'column',
       }}
     >
-      <Logo height="12.5rem" href="#" />
-
-      <Icon icon="square" size="12.5rem" href="#" />
-      <Icon icon="area" size="12.5rem" />
-
       <Button
         label="Visible"
         onClick={() => {
@@ -28,9 +21,21 @@ const App: FC = () => {
         }}
       />
 
-      <Marker coords={['50%', '']} />
+      <Button
+        label="Visible"
+        onClick={() => {
+          setVisible(true)
+        }}
+        isLoading
+      />
 
-      <SpaceCard space={space} />
+      <Button
+        label="Visible"
+        onClick={() => {
+          setVisible(true)
+        }}
+        disabled
+      />
 
       {isVisible && (
         <Modal isVisible={isVisible} setVisible={setVisible}>
@@ -44,6 +49,7 @@ const App: FC = () => {
             <h3>Связаться с нами</h3>
 
             <Input label="Input" placeholder="Place" bordered />
+
             <Input label="Input" placeholder="Place" required />
 
             <Button label="Submit" type="submit" />

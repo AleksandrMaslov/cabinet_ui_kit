@@ -5,6 +5,7 @@
 
   color: var(--font-color);
   border: 0.15rem solid var(--border-color);
+  position: relative;
 
   background-size: 205% 100%;
   background-position: left 0 top 0;
@@ -70,4 +71,30 @@
 
 .button.button_inverted:hover {
   color: var(--font-color);
+}
+
+.button_disabled,
+.button_disabled:hover {
+  color: var(--grey);
+  --border-color: var(--grey);
+  pointer-events: none;
+}
+
+.button_loading,
+.button_loading:hover {
+  color: transparent;
+  cursor: progress;
+}
+/* 
+.loader {
+  font-size: 1em;
+} */
+
+.button .loader,
+.button_inverted:hover .loader {
+  color: var(--font-color);
+}
+.button:hover .loader,
+.button_inverted .loader {
+  color: var(--bg-color);
 }
