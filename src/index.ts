@@ -5,6 +5,7 @@ import './styles/_variables.css'
 import Anchor from './components/Anchor/Anchor'
 import Button from './components/Button/Button'
 import Checkbox from './components/Checkbox/Checkbox'
+import DotsLoader from './components/DotsLoader/DotsLoader'
 import Icon from './components/Icon/Icon'
 import Img from './components/Img/Img'
 import Input from './components/Input/Input'
@@ -17,6 +18,7 @@ export {
   Anchor,
   Button,
   Checkbox,
+  DotsLoader,
   Icon,
   Img,
   Input,

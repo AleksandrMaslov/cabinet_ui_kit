@@ -1,0 +1,43 @@
+.dotsLoader {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  line-height: inherit;
+  vertical-align: middle;
+
+  transform: translateY(-1em);
+  font-size: 1em;
+}
+.dotsLoader,
+.dotsLoader:before,
+.dotsLoader:after {
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  animation: dots 1.8s infinite ease-in-out;
+}
+.dotsLoader:before,
+.dotsLoader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.dotsLoader:before {
+  left: -1.5em;
+  animation-delay: -0.32s;
+}
+.dotsLoader:after {
+  left: 1.5em;
+  animation-delay: 0.32s;
+}
+
+@keyframes dots {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 1em 0 -1em;
+  }
+  40% {
+    box-shadow: 0 1em 0 0;
+  }
+}
