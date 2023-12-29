@@ -6,8 +6,8 @@ import Icon from '../Icon/Icon'
 import classes from './Modal.module.css'
 
 interface ModalProps {
-  isVisible: boolean
-  setVisible: (value: boolean) => void
+  isModalOpened: boolean
+  setModalOpened: (value: boolean) => void
   children?: ReactNode
   className?: string
 }
@@ -15,19 +15,19 @@ interface ModalProps {
 const portal = document.getElementById('portal') as HTMLDivElement
 
 const Modal: FC<ModalProps> = ({
-  isVisible,
-  setVisible,
+  isModalOpened,
+  setModalOpened,
   className,
   children,
 }) => {
   const coverClasses = [classes.cover]
-  if (!isVisible) coverClasses.push(classes.cover_out)
+  if (!isModalOpened) coverClasses.push(classes.cover_out)
 
   const modalClasses = [classes.modal]
-  if (!isVisible) modalClasses.push(classes.modal_out)
+  if (!isModalOpened) modalClasses.push(classes.modal_out)
   if (className) modalClasses.push(className)
 
-  const closeHandler = () => setVisible(false)
+  const closeHandler = () => setModalOpened(false)
 
   const component = (
     <div className={coverClasses.join(' ')} onClick={closeHandler}>

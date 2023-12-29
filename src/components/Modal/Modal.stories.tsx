@@ -11,9 +11,9 @@ const meta: Meta<typeof Modal> = {
   component: Modal,
   decorators: [
     (Story: StoryFn) => {
-      const [isVisible, setVisible] = useState<boolean>(false)
+      const [isModalOpened, setVisible] = useState<boolean>(false)
       const clickHandler = () => {
-        setVisible(!isVisible)
+        setVisible(!isModalOpened)
       }
 
       return (
@@ -24,7 +24,9 @@ const meta: Meta<typeof Modal> = {
             onClick={clickHandler}
           />
 
-          {isVisible && <Story isVisible={isVisible} setVisible={setVisible} />}
+          {isModalOpened && (
+            <Story isModalOpened={isModalOpened} setVisible={setVisible} />
+          )}
         </div>
       )
     },
@@ -34,14 +36,14 @@ const meta: Meta<typeof Modal> = {
   },
   tags: ['autodocs'],
   argTypes: {
-    isVisible: {
+    isModalOpened: {
       description: 'Состояние видимости модального окна',
       table: {
         category: 'Required',
         defaultValue: { summary: 'undefined' },
       },
     },
-    setVisible: {
+    setModalOpened: {
       description: 'Функция управления состоянием видимости',
       table: {
         category: 'Required',
@@ -72,15 +74,15 @@ export default meta
 export function Default(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   args: any,
-  context: { isVisible: boolean; setVisible: () => void },
+  context: { isModalOpened: boolean; setVisible: () => void },
 ) {
-  const { isVisible, setVisible } = context
+  const { isModalOpened, setVisible } = context
   return (
     <Modal
       {...{
         children: 'Modal Content',
-        isVisible: isVisible,
-        setVisible: setVisible,
+        isModalOpened: isModalOpened,
+        setModalOpened: setVisible,
         className: undefined,
       }}
     >

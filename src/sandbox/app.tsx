@@ -40,7 +40,7 @@ const App: FC = () => {
       <Input label="Input" placeholder="test" />
 
       {isVisible && (
-        <Modal isVisible={isVisible} setVisible={setVisible}>
+        <Modal isVisible={isVisible} setModalOpened={setVisible}>
           <form
             style={{
               display: 'flex',
