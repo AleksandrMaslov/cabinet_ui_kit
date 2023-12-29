@@ -37,6 +37,8 @@ const App: FC = () => {
         disabled
       />
 
+      <Input label="Input" placeholder="test" />
+
       {isVisible && (
         <Modal isVisible={isVisible} setVisible={setVisible}>
           <form

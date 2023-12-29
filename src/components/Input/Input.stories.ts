@@ -17,8 +17,14 @@ const meta: Meta<typeof Input> = {
         defaultValue: { summary: 'undefined' },
       },
     },
+    disabled: {
+      description: 'Состояние неактивности элемента ввода',
+      table: {
+        category: 'Optional',
+      },
+    },
     required: {
-      description: 'Подпись элемента ввода',
+      description: 'Необходимость базовой валидации',
       table: {
         category: 'Optional',
       },
@@ -30,26 +36,26 @@ const meta: Meta<typeof Input> = {
       },
     },
     bordered: {
-      description: 'Подпись элемента ввода',
+      description: 'Вариант отображения элемента ввода с внешними границами',
       table: {
         category: 'Optional',
       },
     },
     value: {
-      description: 'Подпись элемента ввода',
+      description: 'Введенное значение',
       table: {
         category: 'Optional',
         defaultValue: { summary: 'undefined' },
       },
     },
     type: {
-      description: 'Подпись элемента ввода',
+      description: 'Тип элемента ввода',
       table: {
         category: 'Optional',
       },
     },
     setValue: {
-      description: 'Функция изменения состояния элемента ввода',
+      description: 'Функция управления значением элемента ввода',
       table: {
         category: 'Optional',
         defaultValue: { summary: 'undefined' },
@@ -64,8 +70,7 @@ const meta: Meta<typeof Input> = {
       },
     },
     id: {
-      description:
-        'Используется для связывания со встроенным элементом "label"',
+      description: 'Идентификатор для связи со встроенным элементом "label"',
       table: {
         category: 'Optional',
         defaultValue: { summary: 'undefined' },
@@ -85,6 +90,14 @@ const meta: Meta<typeof Input> = {
         defaultValue: { summary: 'undefined' },
       },
     },
+    error: {
+      description:
+        'Сообщение об ошибке, выводимое ниже элемента ввода при потере фокуса',
+      table: {
+        category: 'Optional',
+        defaultValue: { summary: 'undefined' },
+      },
+    },
   },
 } satisfies Meta<typeof Input>
 
@@ -98,12 +111,14 @@ export const Default: Story = {
     type: 'text',
     name: undefined,
     id: undefined,
-    value: undefined,
-    setValue: undefined,
-    required: false,
-    autoComplete: 'off',
     bordered: false,
     className: undefined,
+    disabled: false,
+    required: false,
+    autoComplete: 'off',
+    value: undefined,
+    setValue: undefined,
+    error: 'Сообщение об ошибке',
   },
 }
 
@@ -116,9 +131,11 @@ export const Bordered: Story = {
     id: undefined,
     value: undefined,
     setValue: undefined,
+    disabled: false,
     required: false,
     autoComplete: 'off',
     bordered: true,
     className: undefined,
+    error: 'Сообщение об ошибке',
   },
 }

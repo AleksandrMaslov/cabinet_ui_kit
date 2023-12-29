@@ -1,4 +1,5 @@
 .input {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -14,4 +15,11 @@
 .text_bordered {
   padding: 1.5rem;
   border: 0.1rem solid var(--grey);
+}
+
+.error {
+  position: absolute;
+  top: calc(100% + 0.7rem);
+  color: var(--red);
+  font-size: 1.5rem;
 }
