@@ -48,8 +48,8 @@ const meta: Meta<typeof Input> = {
         category: 'Optional',
       },
     },
-    onChange: {
-      description: 'Обработчик изменения состояния элемента ввода',
+    setValue: {
+      description: 'Функция изменения состояния элемента ввода',
       table: {
         category: 'Optional',
         defaultValue: { summary: 'undefined' },
@@ -99,7 +99,7 @@ export const Default: Story = {
     name: undefined,
     id: undefined,
     value: undefined,
-    onChange: undefined,
+    setValue: undefined,
     required: false,
     autoComplete: 'off',
     bordered: false,
@@ -115,7 +115,7 @@ export const Bordered: Story = {
     name: undefined,
     id: undefined,
     value: undefined,
-    onChange: undefined,
+    setValue: undefined,
     required: false,
     autoComplete: 'off',
     bordered: true,

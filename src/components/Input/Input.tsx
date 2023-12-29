@@ -12,7 +12,7 @@ interface InputProps {
   name?: 'text' | 'email' | 'password' | 'tel' | 'username'
   bordered?: boolean
   value?: string
-  onChange?: (value: string) => void
+  setValue?: (value: string) => void
   autoComplete?: 'off' | 'on'
   required?: boolean
   className?: string
@@ -24,7 +24,7 @@ const Input: FC<InputProps> = ({
   id,
   name,
   value,
-  onChange,
+  setValue,
   className,
   autoComplete = 'off',
   type = 'text',
@@ -38,7 +38,7 @@ const Input: FC<InputProps> = ({
   if (bordered) textClasses.push(classes.text_bordered)
 
   const onChangeHandler: InputChangeHandler =
-    onChange && (event => onChange(event.target.value))
+    setValue && (event => setValue(event.target.value))
 
   return (
     <label className={rootClasses.join(' ')} htmlFor={id}>
