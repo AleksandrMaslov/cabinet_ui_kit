@@ -9,7 +9,7 @@ interface InputProps {
   placeholder?: string
   id?: string
   type?: 'text' | 'email' | 'password' | 'tel'
-  name?: 'text' | 'email' | 'password' | 'tel' | 'username'
+  name?: 'text' | 'email' | 'password' | 'tel' | 'username' | 'comments'
   bordered?: boolean
   value?: string
   setValue?: (value: string) => void
