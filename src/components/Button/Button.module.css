@@ -85,10 +85,6 @@
   color: transparent;
   cursor: progress;
 }
-/* 
-.loader {
-  font-size: 1em;
-} */
 
 .button .loader,
 .button_inverted:hover .loader {
