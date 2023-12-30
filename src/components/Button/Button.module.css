@@ -73,10 +73,10 @@
   color: var(--font-color);
 }
 
-.button_disabled,
-.button_disabled:hover {
+.button_disabled {
   color: var(--grey);
   --border-color: var(--grey);
+  opacity: 0.5;
   pointer-events: none;
 }
 
