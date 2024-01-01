@@ -10,6 +10,7 @@
   background-color: transparent;
   padding: 1rem 0rem;
   border-bottom: 0.1rem solid var(--black);
+  text-overflow: ellipsis;
 }
 
 .text_bordered {
@@ -17,9 +18,29 @@
   border: 0.1rem solid var(--grey);
 }
 
+.text_iconed {
+  padding-right: 4rem;
+}
+
 .error {
   position: absolute;
   top: calc(100% + 0.7rem);
   color: var(--red);
   font-size: 1.5rem;
+}
+
+.icon {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.2rem;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.icon:hover {
+  opacity: 1;
+}
+
+.icon_bordered {
+  bottom: 1.8rem;
 }

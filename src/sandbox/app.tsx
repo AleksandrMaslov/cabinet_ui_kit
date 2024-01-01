@@ -1,9 +1,9 @@
 import { FC, useState } from 'react'
 
-import { Button, Input, Modal } from '..'
+import { Input } from '..'
 
 const App: FC = () => {
-  const [isVisible, setVisible] = useState<boolean>(false)
+  const [value, setValue] = useState<string>('')
 
   return (
     <div
@@ -14,50 +14,31 @@ const App: FC = () => {
         flexDirection: 'column',
       }}
     >
-      <Button
-        label="Visible"
-        onClick={() => {
-          setVisible(true)
-        }}
+      <Input label="Input" placeholder="test" {...{ value, setValue }} />
+
+      <Input
+        label="Input"
+        placeholder="test"
+        icon="cross"
+        {...{ value, setValue }}
       />
 
-      <Button
-        label="Visible"
-        onClick={() => {
-          setVisible(true)
-        }}
-        isLoading
+      <Input
+        label="Input"
+        placeholder="test"
+        icon="eye"
+        {...{ value, setValue }}
       />
 
-      <Button
-        label="Visible"
-        onClick={() => {
-          setVisible(true)
-        }}
-        disabled
+      <Input
+        label="Input"
+        placeholder="test"
+        icon="cross"
+        bordered
+        {...{ value, setValue }}
       />
 
-      <Input label="Input" placeholder="test" />
-
-      {isVisible && (
-        <Modal isVisible={isVisible} setModalOpened={setVisible}>
-          <form
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '2rem',
-            }}
-          >
-            <h3>Связаться с нами</h3>
-
-            <Input label="Input" placeholder="Place" bordered />
-
-            <Input label="Input" placeholder="Place" required />
-
-            <Button label="Submit" type="submit" />
-          </form>
-        </Modal>
-      )}
+      <Input label="Input" placeholder="test" icon="eye" bordered />
     </div>
   )
 }

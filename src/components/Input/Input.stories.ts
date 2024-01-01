@@ -48,12 +48,6 @@ const meta: Meta<typeof Input> = {
         defaultValue: { summary: 'undefined' },
       },
     },
-    type: {
-      description: 'Тип элемента ввода',
-      table: {
-        category: 'Optional',
-      },
-    },
     setValue: {
       description: 'Функция управления значением элемента ввода',
       table: {
@@ -98,6 +92,18 @@ const meta: Meta<typeof Input> = {
         defaultValue: { summary: 'undefined' },
       },
     },
+    password: {
+      description: 'Определение типа элемента ввода password',
+      table: {
+        category: 'Optional',
+      },
+    },
+    icon: {
+      description: 'Отображение иконки внутри элемента ввода',
+      table: {
+        category: 'Optional',
+      },
+    },
   },
 } satisfies Meta<typeof Input>
 
@@ -108,7 +114,6 @@ export const Default: Story = {
   args: {
     label: 'Label',
     placeholder: 'Placeholder',
-    type: 'text',
     name: undefined,
     id: undefined,
     bordered: false,
@@ -119,12 +124,13 @@ export const Default: Story = {
     value: undefined,
     setValue: undefined,
     error: 'Сообщение об ошибке',
+    password: false,
+    icon: undefined,
   },
 }
 
 export const Bordered: Story = {
   args: {
-    type: 'text',
     label: 'Label',
     placeholder: 'Placeholder',
     name: undefined,
@@ -137,5 +143,64 @@ export const Bordered: Story = {
     bordered: true,
     className: undefined,
     error: 'Сообщение об ошибке',
+    password: false,
+    icon: undefined,
+  },
+}
+
+export const Iconed: Story = {
+  args: {
+    label: 'Label',
+    placeholder: 'Placeholder',
+    name: undefined,
+    id: undefined,
+    value: undefined,
+    setValue: undefined,
+    disabled: false,
+    required: false,
+    autoComplete: 'off',
+    bordered: true,
+    className: undefined,
+    error: 'Сообщение об ошибке',
+    password: false,
+    icon: 'cross',
+  },
+}
+
+export const PasswordInput: Story = {
+  args: {
+    label: 'Label',
+    placeholder: 'Placeholder',
+    name: undefined,
+    id: undefined,
+    value: undefined,
+    setValue: undefined,
+    disabled: false,
+    required: false,
+    autoComplete: 'off',
+    bordered: true,
+    className: undefined,
+    error: 'Сообщение об ошибке',
+    password: false,
+    icon: 'cross',
+  },
+}
+
+export const PasswordInputToggle: Story = {
+  args: {
+    label: 'Label',
+    placeholder: 'Placeholder',
+    name: undefined,
+    id: undefined,
+    value: undefined,
+    setValue: undefined,
+    disabled: false,
+    required: false,
+    autoComplete: 'off',
+    bordered: true,
+    className: undefined,
+    error: 'Сообщение об ошибке',
+    password: true,
+    icon: 'eye',
   },
 }
