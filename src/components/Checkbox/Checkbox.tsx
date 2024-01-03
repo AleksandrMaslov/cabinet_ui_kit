@@ -18,8 +18,8 @@ interface CheckboxProps {
     | 'white'
     | 'lightgrey'
     | 'grey'
+  checked?: boolean
   onChange?: (value: boolean) => void
-  defaultChecked?: boolean
   className?: string
 }
 
@@ -29,9 +29,9 @@ const Checkbox: FC<CheckboxProps> = ({
   label,
   color,
   className,
+  checked,
   onChange,
   size = '1.1em',
-  defaultChecked = false,
 }) => {
   const rootClasses = [classes.checkbox]
   if (color) rootClasses.push(classes[`checkbox_${color}`])
@@ -46,7 +46,7 @@ const Checkbox: FC<CheckboxProps> = ({
         className={classes.input}
         style={{ height: size, width: size }}
         onChange={onChangeHandler}
-        {...{ id, name, defaultChecked, type: 'checkbox' }}
+        {...{ id, name, checked, type: 'checkbox' }}
       />
 
       {label && <span>{label}</span>}
