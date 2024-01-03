@@ -1,10 +1,8 @@
-import { FC, useState } from 'react'
+import { FC } from 'react'
 
-import { Input } from '..'
+import { Button } from '..'
 
 const App: FC = () => {
-  const [value, setValue] = useState<string>('')
-
   return (
     <div
       style={{
@@ -14,31 +12,20 @@ const App: FC = () => {
         flexDirection: 'column',
       }}
     >
-      <Input label="Input" placeholder="test" {...{ value, setValue }} />
-
-      <Input
-        label="Input"
-        placeholder="test"
-        icon="cross"
-        {...{ value, setValue }}
+      <Button
+        label="1"
+        onClick={() => {
+          console.log('click')
+        }}
       />
 
-      <Input
-        label="Input"
-        placeholder="test"
-        icon="eye"
-        {...{ value, setValue }}
+      <Button
+        label="2"
+        isLoading
+        onClick={() => {
+          console.log('click2')
+        }}
       />
-
-      <Input
-        label="Input"
-        placeholder="test"
-        icon="cross"
-        bordered
-        {...{ value, setValue }}
-      />
-
-      <Input label="Input" placeholder="test" icon="eye" bordered />
     </div>
   )
 }
