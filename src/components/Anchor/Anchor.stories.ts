@@ -56,6 +56,14 @@ const meta: Meta<typeof Anchor> = {
         defaultValue: { summary: 'undefined' },
       },
     },
+    disabled: {
+      control: 'boolean',
+      description: 'Не активное состояние компонента',
+      table: {
+        category: 'Optional',
+        defaultValue: { summary: false },
+      },
+    },
     underlined: {
       control: 'boolean',
       description: 'Видимость подчеркивания ссылки',
@@ -84,6 +92,18 @@ export const Default: Story = {
     target: undefined,
     onClick: undefined,
     underlined: false,
+    disabled: false,
+  },
+}
+
+export const Disabled: Story = {
+  args: {
+    children: 'Anchor',
+    href: undefined,
+    target: undefined,
+    onClick: undefined,
+    underlined: false,
+    disabled: true,
   },
 }
 

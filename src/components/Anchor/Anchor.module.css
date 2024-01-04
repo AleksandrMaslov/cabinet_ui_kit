@@ -4,6 +4,12 @@
   cursor: pointer;
 }
 
+.anchor_disabled {
+  cursor: auto;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
 .anchor::after {
   content: '';
   position: absolute;

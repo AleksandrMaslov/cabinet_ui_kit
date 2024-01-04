@@ -1,19 +1,18 @@
 import { FC } from 'react'
 
-import { Anchor, Checkbox } from '..'
+import { Anchor } from '..'
 
 const App: FC = () => {
   return (
     <div
       style={{
+        margin: 'auto',
+        display: 'block',
         width: '600px',
         padding: '3rem',
         gap: '2rem',
-        display: 'flex',
-        flexDirection: 'column',
       }}
     >
-      <Checkbox label="test" disabled />
       <Anchor disabled>TEST</Anchor>
     </div>
   )
