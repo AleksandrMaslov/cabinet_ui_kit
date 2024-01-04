@@ -11,6 +11,12 @@
   cursor: pointer;
 }
 
+.input:disabled,
+.checkbox:has(.input:disabled) {
+  cursor: auto;
+  opacity: 0.7;
+}
+
 .checkbox_white {
   --color: var(--white);
 }
