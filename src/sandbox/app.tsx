@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { Anchor } from '..'
+import { Anchor, Checkbox, Input } from '..'
 
 const App: FC = () => {
   return (
@@ -13,7 +13,9 @@ const App: FC = () => {
         gap: '2rem',
       }}
     >
-      <Anchor disabled>TEST</Anchor>
+      <Anchor>TEST</Anchor>
+      <Input disabled icon="cross" />
+      <Checkbox label="teste" disabled />
     </div>
   )
 }

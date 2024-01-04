@@ -44,3 +44,7 @@
 .icon_bordered {
   bottom: 1.8rem;
 }
+
+.icon_disabled {
+  pointer-events: none;
+}

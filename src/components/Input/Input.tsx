@@ -48,6 +48,7 @@ const Input: FC<InputProps> = ({
 
   const iconClasses = [classes.icon]
   if (bordered) iconClasses.push(classes.icon_bordered)
+  if (disabled) iconClasses.push(classes.icon_disabled)
 
   const [isDirty, setDirty] = useState<boolean>(false)
 
