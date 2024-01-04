@@ -4,16 +4,16 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  cursor: pointer;
 }
 
-.input {
+.checkbox:hover,
+.input:hover {
   cursor: pointer;
 }
 
 .input:disabled,
 .checkbox:has(.input:disabled) {
-  cursor: auto;
+  pointer-events: none;
   opacity: 0.7;
 }
 
