@@ -1,10 +1,13 @@
 {
-  "name": "cabinet_ui_kit",
+  "name": "@aleksandrmaslov/cabinet_ui_kit",
   "author": "amaslov",
   "description": "Company UI Kit",
   "license": "MIT",
   "private": false,
   "version": "1.0.1",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/aleksandrmaslov"
+  },
   "type": "module",
   "module": "./dist/index.js",
   "main": "./dist/index.cjs",
@@ -20,8 +23,9 @@
     }
   },
   "files": [
-    "dist"
+    "./dist/**/*"
   ],
+  "types": "./dist/index.d.ts",
   "sideEffects": [
     "**/*.css"
   ],
