@@ -4,7 +4,7 @@
   "description": "Company UI Kit",
   "license": "MIT",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/aleksandrmaslov"
   },
