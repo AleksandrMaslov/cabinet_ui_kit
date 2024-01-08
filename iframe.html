@@ -18,9 +18,11 @@
     window.LOGLEVEL = 'info';
     window.FRAMEWORK_OPTIONS = {};
     window.CHANNEL_OPTIONS = {};
-    window.FEATURES = {"warnOnLegacyHierarchySeparator":true,"buildStoriesJson":false,"storyStoreV7":true,"argTypeTargetsV7":true,"legacyDecoratorFileOrder":false};
+    window.FEATURES = {"warnOnLegacyHierarchySeparator":true,"buildStoriesJson":false,"storyStoreV7":true,"argTypeTargetsV7":true,"legacyDecoratorFileOrder":false,"disallowImplicitActionsInRenderV8":false};
     window.STORIES = [{"titlePrefix":"","directory":"./src","files":"**/*.mdx","importPathMatcher":"^\\.[\\\\/](?:src(?:[\\\\/](?!\\.)(?:(?:(?!(?:^|[\\\\/])\\.).)*?)[\\\\/]|[\\\\/]|$)(?!\\.)(?=.)[^\\\\/]*?\\.mdx)$"},{"titlePrefix":"","directory":"./src","files":"**/*.stories.@(js|jsx|mjs|ts|tsx)","importPathMatcher":"^\\.[\\\\/](?:src(?:[\\\\/](?!\\.)(?:(?:(?!(?:^|[\\\\/])\\.).)*?)[\\\\/]|[\\\\/]|$)(?!\\.)(?=.)[^\\\\/]*?\\.stories\\.(js|jsx|mjs|ts|tsx))$"}];
     window.DOCS_OPTIONS = {"defaultName":"Docs","autodocs":"tag"};
+
+    
 
     // We do this so that "module && module.hot" etc. in Storybook source code
     // doesn't fail (it will simply be disabled)
@@ -363,14 +365,37 @@
 <link rel="preload" href="/fonts/Jost-700.ttf" as="font" crossorigin />
 <link rel="preload" href="/fonts/Jost-800.ttf" as="font" crossorigin />
 
-  <script type="module" crossorigin src="./assets/iframe-91aca9d3.js"></script>
+  <script type="module" crossorigin src="./assets/iframe-fd84265b.js"></script>
 </head>
 
 <body>
   <style>
   :root {
-    font-size: 16px;
-    font-family: 'PT Root UI', sans-serif;
+    font-size: 10px;
+    font-family: var(--font-primary);
+  }
+
+  body {
+    font-size: 1.8rem;
+    line-height: 1.25em;
+  }
+
+  .button_preview {
+    width: 20rem;
+  }
+
+  .wrapper_preview {
+    width: 80rem;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mini {
+    width: 152rem;
+    height: fit-content;
+    transform: scale(0.5);
   }
 </style>
 <div class="sb-preparing-story sb-wrapper">
