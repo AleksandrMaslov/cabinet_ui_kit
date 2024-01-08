@@ -4,7 +4,7 @@
   "description": "Company UI Kit",
   "license": "MIT",
   "private": false,
-  "version": "1.0.3",
+  "version": "1.0.0",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/aleksandrmaslov"
   },
@@ -36,6 +36,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "deploy-storybook": "npm run build-storybook && touch ./storybook-static/.nojekyll && gh-pages -d ./storybook-static -t true",
+    "publish": "npm publish --access public",
     "publish-patch": "npm version patch && npm publish --access public"
   },
   "devDependencies": {
